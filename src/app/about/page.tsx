@@ -48,6 +48,7 @@ export default function About() {
       title: about.technical.title,
       display: about.technical.display,
       items: about.technical.skills.map((skill) => skill.title),
+      
     },
   ];
   return (
@@ -101,6 +102,31 @@ export default function About() {
                     {language}
                   </Tag>
                 ))}
+              </Flex>
+            )}
+             {about.resume.display && (
+              <Flex
+                fitWidth
+                border="brand-alpha-medium"
+                className={styles.blockAlign}
+                style={{
+                  backdropFilter: "blur(var(--static-space-1))",
+                }}
+                background="brand-alpha-weak"
+                radius="full"
+                padding="4"
+                gap="8"
+                marginBottom="m"
+                vertical="center"
+              >
+                <Icon paddingLeft="12" name="document" onBackground="brand-weak" />
+                <Flex paddingX="8">Resume</Flex>
+                <IconButton
+                  href={about.resume.link}
+                  data-border="rounded"
+                  variant="secondary"
+                  icon="chevronRight"
+                />
               </Flex>
             )}
           </Column>
@@ -215,7 +241,7 @@ export default function About() {
                         </Text>
                       ))}
                     </Column>
-                    {experience.images.length > 0 && (
+                    {/* {experience.images.length > 0 && (
                       <Flex fillWidth paddingTop="m" paddingLeft="40" gap="12" wrap>
                         {experience.images.map((image, index) => (
                           <Flex
@@ -240,7 +266,7 @@ export default function About() {
                           </Flex>
                         ))}
                       </Flex>
-                    )}
+                    )} */}
                   </Column>
                 ))}
               </Column>
@@ -278,40 +304,29 @@ export default function About() {
                 {about.technical.title}
               </Heading>
               <Column fillWidth gap="l">
-                {about.technical.skills.map((skill, index) => (
-                  <Column key={`${skill}-${index}`} fillWidth gap="4">
-                    <Text variant="heading-strong-l">{skill.title}</Text>
-                    <Text variant="body-default-m" onBackground="neutral-weak">
-                      {skill.description}
-                    </Text>
-                    {skill.images && skill.images.length > 0 && (
-                      <Flex fillWidth paddingTop="m" gap="12" wrap>
-                        {skill.images.map((image, index) => (
-                          <Flex
-                            key={index}
-                            border="neutral-medium"
-                            radius="m"
-                            //@ts-ignore
-                            minWidth={image.width}
-                            //@ts-ignore
-                            height={image.height}
-                          >
-                            <Media
-                              enlarge
-                              radius="m"
-                              //@ts-ignore
-                              sizes={image.width.toString()}
-                              //@ts-ignore
-                              alt={image.alt}
-                              //@ts-ignore
-                              src={image.src}
-                            />
-                          </Flex>
-                        ))}
-                      </Flex>
-                    )}
-                  </Column>
-                ))}
+                <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+           {about.technical.skills.map((skill) => (
+  <Column key={skill.title} fillWidth gap="4">
+    <Text variant="heading-strong-l" className="mt-8 mb-4">{skill.title}</Text>
+    {skill.description}
+    {/* ✅ Render SVGs for THIS skill */}
+    <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }} className="mt-4">
+      
+      {skill.images?.map((img, i) => (
+        <img
+          key={i}
+          src={img.src}
+          alt={img.alt}
+          width={ 60}
+          height={ 60}
+          style={{ objectFit: "contain" }}
+          className="mt-8"
+        />
+      ))}
+    </div>
+  </Column>
+))}
+          </div>
               </Column>
             </>
           )}

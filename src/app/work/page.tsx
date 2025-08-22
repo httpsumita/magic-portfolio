@@ -1,6 +1,7 @@
-import { Column, Meta, Schema } from "@once-ui-system/core";
+import { Column, Meta, Heading, Schema } from "@once-ui-system/core";
 import { baseURL, about, person, work } from "@/resources";
 import { Projects } from "@/components/work/Projects";
+
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -28,7 +29,16 @@ export default function Work() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      <Projects />
+      {/* <Projects /> */}
+
+      <Heading marginBottom="l" variant="display-strong-s" className="text-center">
+              Parts of the journey not talked about
+            </Heading>
+          
+            <div className="">
+              <iframe src='https://widgets.sociablekit.com/linkedin-profile-posts/iframe/25591147'  width='50%' height='500' className="border-none rounded-full"></iframe>
+            </div>
+            
     </Column>
   );
 }

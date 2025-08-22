@@ -1,16 +1,16 @@
 import { Logo } from "@once-ui-system/core";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Sumita",
+  lastName: "Pathak",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "Software Developer",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "httpsumita@gmail.com",
+  location: "Asia/Kolkata", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "Bengali","Hindi"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
@@ -30,22 +30,22 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/httpsumita",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/sumita-pathak-91699a215/",
   },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
-  },
+  // {
+  //   name: "Threads",
+  //   icon: "threads",
+  //   link: "https://www.threads.com/@once_ui",
+  // },
   {
     name: "Email",
     icon: "email",
-    link: `mailto:${person.email}`,
+    link: `mailto:${ person.email}`,
   },
 ];
 
@@ -83,16 +83,19 @@ const about = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://cal.com/httpsumita",
+  },
+  resume: {
+    display: true,
+    link: "https://drive.google.com/file/d/1jMt0dP6blpk8B5mYW2q6JjzqoWNIwxzX/view?usp=sharing",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Sumita is an undergraduate student pursuing her B.Tech. degree in Computer Science and Engineering with a specialization in Artificial Intelligence
+         and Machine Learning (AI & ML)
       </>
     ),
   },
@@ -101,17 +104,21 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Deepwater",
+        timeframe: "February-April 2025",
+        role: "Full Stack Web Developer (Freelancer)",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Developed responsive web interfaces using Next.js, Tailwind CSS, TypeScript, and reusable React components
+            reducing code redundancy by 30%
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Integrated dynamic modals and contact forms with Appwrite backend, enabling secure and real-time data
+            handling
+          </>,
+          <>
+            Streamlined local-to-production deployment with DNS setup, port forwarding, and SSL configuration,
+            accelerating delivery by 40%.
           </>,
         ],
         images: [
@@ -125,18 +132,36 @@ const about = {
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "WIT Dreamin'",
+        timeframe: "July-November 2024",
+        role: "Backend Developer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Automated CI/CD pipelines using GitHub Actions, reducing manual deployment time by 30%
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Containerized using Docker, reducing deployment failures by 60% and increasing environment consistency
           </>,
+          <>
+            Deployed and maintained AWS EC2 instances, achieving 95% uptime and optimizing server performance.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "FilmFinance.App",
+        timeframe: "August 2023-August 2024",
+        role: "Product Manager",
+        achievements: [
+          <>
+            Implemented an agile project management system that redefined task assignment and accountability
+across diverse teams; led to a notable 25% increase in project completion rates within designated timelines.
+          </>,
+          <>
+            Conducted online events and crafted social media posts to spread knowledge about legality of
+cryptocurrency
+          </>,
+         
         ],
         images: [],
       },
@@ -147,49 +172,73 @@ const about = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Dr. Sudhir Chandra Sur Institute of Technology and Sports Complex",
+        description: <>B.Tech, Computer Science & Engineering (AIML) </>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Hariyana Vidya Mandir(CBSE)",
+        description: <>12th standard</>,
+      },
+      {
+        name: "St Joan’s School(ICSE)",
+        description: <>10th Standard</>,
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Skillset",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+        title: "Programming Languages ",
+        description: <></>,
         // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+          { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg", alt: "Python" },
+      { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg", alt: "Java" },
+      { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/solidity/solidity-original.svg", alt: "Solidity" },
         ],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
+        title: "Tools and Technologies",
+        description: <> Gemini AI | Vertex AI 
+</>,
         // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+           { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain-wordmark.svg", alt: "django" },
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/djangorest/djangorest-original.svg", alt: "django-rest" },
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg", alt: "Nextjs" },
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original-wordmark.svg", alt: "TailwindCSS" },
+             { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-plain-wordmark.svg", alt: "git" },
+              { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg", alt: "Github" },
+              { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg", alt: "Linux" },
+              { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg", alt: "Postman" },
+               { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg", alt: "Docker" },
+                { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg", alt: "GCP" },
+                 { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg", alt: "AWS" },
+                     
+                      { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg", alt: "nginx" },
+                     
+                        { src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opencv/opencv-original.svg", alt: "OpenCV" },
+
+        ],
+      },
+       {
+        title: "Concepts",
+        description: <>Prompt Engineering | API
+</>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+         
+        ],
+      },
+       {
+        title: "Soft Skills",
+        description: <>Adaptability | Agile Methodologies | Leadership | Public Speaking | Event Management
+</>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          
         ],
       },
     ],
@@ -199,7 +248,7 @@ const about = {
 const blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "MOD, Money & Mindset",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route

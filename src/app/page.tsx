@@ -5,11 +5,12 @@ import { home, about, person, newsletter, baseURL, routes } from "@/resources";
 import { Mailchimp } from "@/components";
 import { Projects } from "@/components/work/Projects";
 import { Posts } from "@/components/blog/Posts";
+import About from "./about/page";
 
 export default function Home() {
   return (
     <Column maxWidth="m" gap="xl" horizontal="center">
-      <Schema
+      {/* <Schema
         as="webPage"
         baseURL={baseURL}
         path={home.path}
@@ -81,9 +82,13 @@ export default function Home() {
             <Posts range={[1, 2]} columns="2" />
           </Flex>
         </Flex>
-      )}
-      <Projects range={[2]} />
-      {newsletter.display && <Mailchimp newsletter={newsletter} />}
+      )} */}
+      {/* <Projects range={[2]} /> */}
+      
+
+      
+      <About/>
+      {/* {newsletter.display && <Mailchimp newsletter={newsletter} />} */}
     </Column>
   );
 }
