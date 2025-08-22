@@ -1,7 +1,11 @@
 import { ImageResponse } from "next/og";
 import { baseURL, person } from "@/resources";
 
-export const runtime = "edge";
+export const config = {
+  runtime: "nodejs", // forces serverless function (50MB limit instead of 1MB)
+};
+
+
 
 export async function GET(request: Request) {
   let url = new URL(request.url);
