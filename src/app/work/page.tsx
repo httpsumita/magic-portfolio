@@ -35,10 +35,7 @@ export default function Work() {
               Parts of the journey not talked about
             </Heading>
           
-            <div className="">
-              <iframe src='https://widgets.sociablekit.com/linkedin-profile-posts/iframe/25591147'  width='50%' height='500' className="border-none rounded-full"></iframe>
-            </div>
-            
+        
     </Column>
   );
 }
